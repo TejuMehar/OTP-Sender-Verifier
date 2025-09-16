@@ -7,6 +7,7 @@ const sendOtp = async (req, res) => {
     const { email } = req.body;
     const otp = Math.floor(100000 + Math.random() * 900000).toString();
     await Otp.create({ email, otp });
+    
     await transporter.sendMail({
       from: "webcultivate01@gmail.com",
       to: email,

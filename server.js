@@ -2,6 +2,8 @@ const express = require("express");
 const bodyParser = require("body-parser");
 const connectDB = require("./config/db");
 const otpRoutes = require("./routes/otpRoutes");
+const  dotenv = require('dotenv');
+
 
 const app = express();
 app.use(bodyParser.json());
